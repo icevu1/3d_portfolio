@@ -7,6 +7,12 @@ import { EarthCanvas } from './canvas'
 import { SectionWrapper } from '../hoc'
 import { slideIn } from '../utils/motion'
 
+
+//TemplateID template_9skfsmo
+//ServiceID service_o5yfsce
+//Public Key JnfviMhQH2CXrsnPj
+
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -17,9 +23,34 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false)
 
-  const handleChange = (e) => {}
+  const handleChange = (e) => {
+    const {name, value} = e.target;
 
-  const handleSubmit = (e) => {}
+    setForm({...form, [name]: value})
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true)
+
+    emailjs.send(
+      'service_o5yfsce',
+       'template_9skfsmo',
+        {from_name: form.name, to_name: 'Danik', from_email: form.email, to_email: 'icevu1@gmail.com', message: form.message},
+         'JnfviMhQH2CXrsnPj').then(() => {
+            setLoading(false)
+            alert('Message sent successfully!')
+            setForm({
+              name: '',
+              email: '',
+              message: ''
+            })
+         }, (error) => {
+            setLoading(false)
+            alert('An error occured, please try again later!')
+            console.log(error.text)
+         })
+  }
 
   return (
     <div className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
@@ -29,26 +60,26 @@ const Contact = () => {
 
         <form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col gap-8'>
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
+            <span className='text-white font-medium mb-4'>Name</span>
             <input type='text' name='name' value={form.name} 
             onChange={handleChange} placeholder="What's your name?" 
-            className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg 
+            className=' py-4 px-6 placeholder:text-secondary text-white rounded-lg 
             outline-none border-none font-medium'/>
           </label>
 
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Email</span>
+            <span className='text-white font-medium mb-4'>Email</span>
             <input type='email' name='email' value={form.email} 
             onChange={handleChange} placeholder="What's your email?" 
-            className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg 
+            className=' py-4 px-6 placeholder:text-secondary text-white rounded-lg 
             outline-none border-none font-medium'/>
           </label>
 
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
+            <span className='text-white font-medium mb-4'>Message</span>
             <textarea rows='7'  name='message' value={form.message} 
             onChange={handleChange} placeholder="What do you want to say?" 
-            className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg 
+            className=' py-4 px-6 placeholder:text-secondary text-white rounded-lg 
             outline-none border-none font-medium'/>
           </label>
 

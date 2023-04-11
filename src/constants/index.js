@@ -25,6 +25,10 @@ import {
     threejs,
   } from "../assets";
   
+  import MCSE from "../assets/MCSE.png";
+  import MCSA from "../assets/MCSA.png";
+
+
   export const navLinks = [
     {
       id: "about",
@@ -42,21 +46,26 @@ import {
   
   const services = [
     {
-      title: "Web Developer",
-      icon: web,
+      title: "MCSE",
+      icon: MCSE,
     },
     {
-      title: "React Native Developer",
-      icon: mobile,
-    },
-    {
-      title: "Backend Developer",
-      icon: backend,
-    },
-    {
+      title: "MCSA",
+      icon: MCSA,
+    },    
+    /*{
       title: "Database Engineer",
       icon: creator,
     },
+    {
+      title: "React Developer",
+      icon: mobile,
+    },
+    {
+      title: "IT",
+      icon: it,
+    },*/
+
   ];
   
   const technologies = [

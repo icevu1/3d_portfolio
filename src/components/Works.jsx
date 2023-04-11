@@ -43,10 +43,11 @@ const Works = () => {
 
 
       <div className="w-full flex ">
-        <motion.p variants={fadeIn('','', 0.1, 1)} className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore porro aspernatur,
-          quisquam rerum, pariatur quasi voluptate perferendis ipsam aliquam laboriosam vitae hic
-          praesentium odio. Laborum vel explicabo porro molestiae dignissimos!
+        <motion.p variants={fadeIn('','', 0.1, 1)} className='mt-3 text-white text-[17px] max-w-3xl leading-[30px]'>
+        Discover my versatile project portfolio, 
+        demonstrating expertise in optimizing processes, uncovering valuable insights,
+        and effectively communicating information. Together, let's elevate your business with 
+        tailored solutions that address your unique challenges.
         </motion.p>
       </div>
 
