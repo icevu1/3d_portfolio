@@ -8,12 +8,12 @@ import Loader from "../Loader";
 
 const Computers = () => {
   const computer = useGLTF("/desktop_pc/scene.gltf", true);
-  const laptop = useGLTF("/laptop/scene.gltf", true);
+  const laptop = useGLTF("/server3D/scene.gltf", true);
   return (
     <mesh>
-      <hemisphereLight intensity={0.30} />
-      <pointLight  intensity={1} />
-      <spotLight intensity={1} 
+      <hemisphereLight intensity={5.30} />
+      <pointLight  intensity={5} />
+      <spotLight intensity={5} 
       position={[-20, 50, 10]} 
       angle={0.12} 
       penumbra={1} 
@@ -21,8 +21,9 @@ const Computers = () => {
       shadow-mapSize={1024} />
       <primitive 
         object={laptop.scene}
-        scale={0.02}
-        position={[-1,-1.25, 0]}
+        scale={2}
+        // scale={0.02} for laptop
+        position={[-2,-3.25, 0]} // [-1,-1.25, 0] for laptop
         rotation={[0,Math.PI / 2, 0]}
        />
     </mesh>
