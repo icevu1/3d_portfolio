@@ -239,6 +239,19 @@ import {
       image: "https://randomuser.me/api/portraits/women/6.jpg",
     },
   ];
+
+  const educations = [
+    {
+      title: "Computer Engineering",
+      school: "La Cite Collegiale",
+      date: "2017 - 2019",
+    },
+    {
+      title: "Computer Programming",
+      school: "La Cite Collegiale",
+      date: "2019 - 2020",
+    }
+  ];
   
   const projects = [
     {
@@ -295,27 +308,6 @@ import {
       image: senator,
       source_code_link: "https://github.com/icevu1/senator_stock_tracker",
     },
-    {
-      name: "Trip Guide",
-      description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-      tags: [
-        {
-          name: "nextjs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "supabase",
-          color: "green-text-gradient",
-        },
-        {
-          name: "css",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
-    },
   ];
   
-  export { services, technologies, experiences, testimonials, projects, certs, exams };
+  export { services, technologies, experiences, testimonials, projects, certs, exams, educations };

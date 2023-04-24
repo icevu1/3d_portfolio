@@ -23,6 +23,10 @@ const Hero = () => {
 
       </div>
       <ComputersCanvas/>
+      
+      <div className="absolute text-center text-white font-bold text-xl" style={{ bottom: '14%', left: '50%', transform: 'translateX(-50%)' }}>
+        Interact with me
+      </div>
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>
