@@ -7,7 +7,7 @@ import Loader from "../Loader";
 
 
 const Computers = () => {
-  const server = useGLTF("/server3D/scene.gltf", true);
+  const server = useGLTF("/3d_portfolio/server3D/scene.gltf", true);
   return (
     <mesh>
       <hemisphereLight intensity={5.30} />

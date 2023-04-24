@@ -5,7 +5,7 @@ import { OrbitControls, Preload, useGLTF} from "@react-three/drei";
 import Loader from "../Loader";
 
 const Earth = () => {
-  const earth = useGLTF("/galaxy/scene.gltf", true);
+  const earth = useGLTF("/3d_portfolio/galaxy/scene.gltf", true);
   return (
     <primitive object={earth.scene} scale={.1} position-y={0} position-x={0} >
       
