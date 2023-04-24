@@ -7,8 +7,7 @@ import Loader from "../Loader";
 
 
 const Computers = () => {
-  const computer = useGLTF("/desktop_pc/scene.gltf", true);
-  const laptop = useGLTF("/server3D/scene.gltf", true);
+  const server = useGLTF("/server3D/scene.gltf", true);
   return (
     <mesh>
       <hemisphereLight intensity={5.30} />
@@ -20,7 +19,7 @@ const Computers = () => {
       castShadow
       shadow-mapSize={1024} />
       <primitive 
-        object={laptop.scene}
+        object={server.scene}
         scale={2}
         // scale={0.02} for laptop
         position={[-2,-3.25, 0]} // [-1,-1.25, 0] for laptop
